@@ -1,6 +1,6 @@
 import { Globalstyle } from "./GlobalStyle";
 import Container from "./components/Container";
-import Footer from "./components/Container/Footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Section } from "./components/Section";
 import Skills from "./components/Section/Skills";
