@@ -38,7 +38,7 @@ export const HeaderToggleOffIcone = styled(ToggleOff)`
     margin: -5px;
 `;
 
-export const HeaderContent = styled.p`
+export const HeaderContent = styled.div`
     font-size: 20px;
     font-weight: 400;
     color: ${({ theme }) => theme.color.slateGray};
