@@ -26,7 +26,7 @@ export const SectionList = styled.ul`
     padding: 0 0 32px 16px;
     margin: 32px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     list-style-type: disc;
 `;
