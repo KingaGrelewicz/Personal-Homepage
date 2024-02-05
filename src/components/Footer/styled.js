@@ -18,6 +18,11 @@ export const FooterMail = styled.span`
     color: ${({ theme }) => theme.color.mineShaft};
     font-size: 32px;
     font-weight: 900;
+
+    &:hover {
+        color: ${({ theme }) => theme.color.scienceBlue};
+        transition: 0.5s;
+    }
 `;
 
 export const FooterContent = styled.div`
