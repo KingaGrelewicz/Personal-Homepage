@@ -33,22 +33,30 @@ export const FooterIcones = styled.div`
     grid-gap: 24px;
     width: fit-content;
     margin-top: 56px;
-    transition: fill 0.3s;
 `;
 
 export const FooterGitHubIcone = styled(GitHubIcone)`
+    fill: ${({ theme }) => theme.color.mineShaft};
+    transition: fill 0.5s;
+
     &:hover {
         fill: ${({ theme }) => theme.color.scienceBlue};
     }
 `;
 
 export const FooterLinkedInIcone = styled(LinkedInIcone)`
+    fill: ${({ theme }) => theme.color.mineShaft};
+    transition: fill 0.5s;
+
      &:hover {
         fill: ${({ theme }) => theme.color.scienceBlue};
     }
 `;
 
 export const FooterFacebookIcone = styled(FacebookIcone)`
+    fill: ${({ theme }) => theme.color.mineShaft};
+    transition: fill 0.5s;
+    
     &:hover {
         fill: ${({ theme }) => theme.color.scienceBlue};
     }
