@@ -53,8 +53,9 @@ export const HeaderButton = styled.a`
     color: ${({ theme }) => theme.color.white};
     border: 1px solid ${({ theme }) => theme.color.scienceBlue};
     border-radius: 4%; 
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px;
     font-size: 20px;
+    font-weight: 600;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 16px;
