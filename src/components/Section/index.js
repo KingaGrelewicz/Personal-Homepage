@@ -1,10 +1,11 @@
-import { SectionTitle, SectionToolImage, SectionWrapper } from "./styled";
+import { SectionImage, SectionTitle, SectionWrapper } from "./styled";
 
-export const Section = ({ title, content }) => {
+export const Section = ({ title, img, content }) => {
     return (
         <SectionWrapper>
             <SectionTitle>
-                {title} <SectionToolImage />
+                {title} 
+                <SectionImage src={img} alt="Section Image" />
             </SectionTitle>
             <div>
                 {content}

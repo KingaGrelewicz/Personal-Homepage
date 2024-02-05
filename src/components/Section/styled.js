@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as ToolImage } from "../../image/tools.svg";
 
 export const SectionWrapper = styled.div`
     max-width: 1216px;
@@ -15,9 +14,11 @@ export const SectionTitle = styled.h2`
     border-bottom: 1px solid ${({ theme }) => theme.color.iron};
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 16px;
 `;
 
-export const SectionToolImage = styled(ToolImage)`
+export const SectionImage = styled.img`
     height: 24px;
     width: 24px;
 `;
