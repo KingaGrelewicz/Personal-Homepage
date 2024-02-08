@@ -19,14 +19,20 @@ export const useRepositoriumData = () => {
                     },
                 });
 
-                console.log(response.data)
+                const processedData = response.data.map(repo => {
+                    return {
+                        name: repo.name,
+                        demo: repo.homepage, 
+                        code: repo.html_url 
+                    };
+                });
+        
                 setRepoData({
                     status: "success",
-                    repositories: response.data,
+                    repositories: processedData,
                 });
 
             } catch (error) {
-                console.log(error);
                 setRepoData({
                     status: "error",
                     repositories: [],
