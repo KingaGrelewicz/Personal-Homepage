@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const SectionWrapper = styled.div`
+export const SkillsWrapper = styled.div`
     max-width: 1216px;
     margin: 72px auto;
     background: ${({ theme }) => theme.color.white};
 `;
 
-export const SectionTitle = styled.h2`
+export const SkillsTitle = styled.h2`
     margin: 0 32px 0 32px;
     padding: 32px 0 16px 0;
     font-size: 30px;
@@ -18,12 +18,12 @@ export const SectionTitle = styled.h2`
     grid-gap: 16px;
 `;
 
-export const SectionImage = styled.img`
+export const SkillsImage = styled.img`
     height: 24px;
     width: 24px;
 `;
 
-export const SectionList = styled.ul`
+export const StyledSkillsList = styled.ul`
     padding: 0 0 32px 16px;
     margin: 32px;
     display: grid;
@@ -32,7 +32,7 @@ export const SectionList = styled.ul`
     list-style-type: disc;
 `;
 
-export const SectionListItem = styled.li`
+export const SkillsListItem = styled.li`
     color: ${({ theme }) => theme.color.slateGray};
     &::marker {
         color: ${({ theme }) => theme.color.scienceBlue};

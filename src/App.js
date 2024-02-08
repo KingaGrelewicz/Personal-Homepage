@@ -3,9 +3,7 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Portfolio } from "./components/Portfolio";
-import { Section } from "./components/Section";
-import Skills from "./components/Section/Skills";
-import WantToLearn from "./components/Section/WantToLearn";
+import { Skills, professionalSkills, skillsToLearn } from "./components/Skills";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 
@@ -14,15 +12,15 @@ function App() {
     <Container>
       <Globalstyle />
       <Header />
-      <Section
+      <Skills
         title="My skillset includes"
         img={Tools}
-        content={<Skills />}
+        skills={professionalSkills}
       />
-      <Section
+      <Skills
         title="What I want to learn next"
         img={Rocket}
-        content={<WantToLearn />}
+        skills={skillsToLearn}
       />
       <Portfolio />
       <Footer />
