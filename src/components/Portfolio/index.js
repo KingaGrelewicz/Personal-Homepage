@@ -1,3 +1,4 @@
+import _ from "lodash";
 import {
   PorftolioLoading,
   PortfolioButton,
@@ -42,7 +43,7 @@ export const Portfolio = () => {
           <PortfolioWarning>Ooops! Something went wrong... </PortfolioWarning>
           <PortfolioWarningText>Sorry, failed to load Github projects.
             You can check them directly on Github.</PortfolioWarningText>
-          <PortfolioButton href="https://github.com/KingaGrelewicz?tab=repositories">
+          <PortfolioButton key="portfolio-button" href="https://github.com/KingaGrelewicz?tab=repositories">
             Go to GitHub
           </PortfolioButton>
         </PortfolioWarningWrapper>
@@ -52,7 +53,7 @@ export const Portfolio = () => {
         <PortfolioWrapper>
           {repositories.map((repo) => (
             <PortfolioTile key={repo.id}>
-              <PortfolioTileHeader>{repo.name}</PortfolioTileHeader>
+              <PortfolioTileHeader>{_.startCase(repo.name.toLowerCase())}</PortfolioTileHeader>
               <PortfolioProjectDescription>{repo.description}</PortfolioProjectDescription>
               <PortfolioTileLinks>
                 <PortfolioTileElement>Demo:
@@ -62,8 +63,6 @@ export const Portfolio = () => {
                     </PortfolioTileLink>
                   )}
                 </PortfolioTileElement>
-              </PortfolioTileLinks>
-              <PortfolioTileLinks>
                 <PortfolioTileElement>Code:
                   <PortfolioTileLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
                     {repo.html_url}
