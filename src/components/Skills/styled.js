@@ -33,8 +33,8 @@ export const StyledSkillsList = styled.ul`
 `;
 
 export const SkillsListItem = styled.li`
-    color: ${({ theme }) => theme.color.slateGray};
+    color: ${({ theme }) => theme.color.secondaryTextColor};
     &::marker {
-        color: ${({ theme }) => theme.color.scienceBlue};
+        color: ${({ theme }) => theme.color.mainBlue};
     }
 `;

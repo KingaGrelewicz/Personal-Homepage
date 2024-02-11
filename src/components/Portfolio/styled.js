@@ -16,7 +16,7 @@ export const PortfolioIcon = styled(PortfolioGitHubIcon)`
 `;
 
 export const PortfolioHeader = styled.h2`
-    color: ${({ theme }) => theme.color.mineShaft};
+    color: ${({ theme }) => theme.color.secondaryTextColor};
     font-size: 30px;
     font-weight: 900;
     text-align: center;
@@ -24,7 +24,7 @@ export const PortfolioHeader = styled.h2`
 `;
 
 export const PortfolioSubheader = styled.h3`
-    color: ${({ theme }) => theme.color.mineShaft};
+    color: ${({ theme }) => theme.color.secondaryTextColor};
     font-size: 20px;
     font-weight: 400;
     text-align: center;
@@ -77,9 +77,9 @@ export const PortfolioWarningText = styled.p`
 
 export const PortfolioButton = styled.a`
 text-decoration: none;
-    background: ${({ theme }) => theme.color.scienceBlue};
+    background: ${({ theme }) => theme.color.mainBlue};
     color: ${({ theme }) => theme.color.white};
-    border: 1px solid ${({ theme }) => theme.color.scienceBlue};
+    border: 1px solid ${({ theme }) => theme.color.mainBlue};
     border-radius: 4%; 
     padding: 12px 16px;
     font-size: 20px;
@@ -88,9 +88,12 @@ text-decoration: none;
 
 export const PortfolioTile = styled.div`
     background: ${({ theme }) => theme.color.white};
-    padding: 16px;
-    border: 6px solid ${({theme}) => theme.color.iron};
+    padding: 24px;
+    border: 6px solid ${({ theme }) => theme.color.iron};
     border-radius: 4px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 24px;
     box-shadow: 0px 16px 58px 0px rgba(9, 10, 51, 0.03);
 
     &:hover {
@@ -99,31 +102,44 @@ export const PortfolioTile = styled.div`
 `;
 
 export const PortfolioTileHeader = styled.h3`
-    color: ${({ theme }) => theme.color.scienceBlue};
+    color: ${({ theme }) => theme.color.mainBlue};
     font-size: 20px;
     margin-bottom: 8px;
 `;
 
 export const PortfolioProjectDescription = styled.div`
-    color: ${({ theme }) => theme.color.slateGray};
+    color: ${({ theme }) => theme.color.primaryTextColor};
     font-size: 18px;   
     font-weight: 400;
-    padding: 24px;
     margin-bottom: 16px;
 `;
 
-export const PortfolioTileLinks = styled.div`
-
-`;
+export const PortfolioTileLinks = styled.div``;
 
 export const PortfolioTileLink = styled.a`
-    color: ${({ theme }) => theme.color.scienceBlue};
+    color: ${({ theme }) => theme.color.mainBlue};
     font-size: 18px;
     padding: 0 5px;
+
+    &:hover {
+        filter: brightness(143%);
+    }
+
+    &:active {
+        filter: brightness(156%);
+    }
+
+    &:focus {
+        outline: none;
+        border-radius: 1px;
+        border: 3px solid ${({ theme }) => theme.color.anakiwa};
+    }
 `;
 
 export const PortfolioTileElement = styled.div`
-    color: ${({ theme }) => theme.color.slateGray};
+    display: flex;
+    align-items: center;
+    color: ${({ theme }) => theme.color.secondaryTextColor};
     font-size: 18px;
     font-weight: 400;
     padding: 8px 5px;
