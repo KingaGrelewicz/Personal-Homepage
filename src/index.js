@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from 'styled-components';
-import { LightTheme } from './theme';
+import { ThemeProvider } from './components/ThemeContex';
+import { light } from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={LightTheme}>
+    <ThemeProvider  theme={light}>
     <App />
     </ThemeProvider>
   </React.StrictMode>
