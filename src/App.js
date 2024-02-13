@@ -6,16 +6,26 @@ import { Portfolio } from "./components/Portfolio";
 import { Skills, professionalSkills, skillsToLearn } from "./components/Skills/index.js";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
-import { ThemeProvider } from "./components/ThemeContext.js";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./theme.js";
+import { useState } from "react";
+
 
 function App() {
-  const {theme} = ThemeProvider;
+  const [theme, setTheme] = useState("light");
+  const isLightTheme = theme === "light";
+
+  const toggleTheme = () => {
+    setTheme(isLightTheme ? "dark" : "light");
+  };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
       <Container>
         <Globalstyle />
-        <Header />
+        <Header
+          toggleTheme={toggleTheme}
+        />
         <Skills
           title="My skillset includes"
           img={Tools}
