@@ -10,10 +10,10 @@ import {
   HeaderToggleOffIcone
 } from "./styled";
 import image from "../../image/kinga.jpg"
-import { useTheme } from "../ThemeContex";
+import { useTheme } from "../ThemeContext";
 
 const Header = () => {
-  const { toggleTheme, currentTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
     <StyledHeader>
@@ -35,8 +35,9 @@ const Header = () => {
         </HeaderContent>
         <HeaderToggleMode>
           DARK MODE OFF
-
-          <HeaderToggleOffIcone />
+          <button onClick={() => toggleTheme()}>
+            <HeaderToggleOffIcone />
+          </button>
         </HeaderToggleMode>
       </HeaderWrapper>
     </StyledHeader>
