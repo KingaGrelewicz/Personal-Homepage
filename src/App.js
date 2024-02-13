@@ -3,15 +3,16 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Header from "./components/Header/index.js";
 import { Portfolio } from "./components/Portfolio";
-import { Skills, professionalSkills, skillsToLearn } from "./components/Skills";
+import { Skills, professionalSkills, skillsToLearn } from "./components/Skills/index.js";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
-import { ThemeProvider } from "./components/ThemeContex.js";
-
+import { ThemeProvider } from "./components/ThemeContext.js";
 
 function App() {
+  const {theme} = ThemeProvider;
+
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <Container>
         <Globalstyle />
         <Header />
