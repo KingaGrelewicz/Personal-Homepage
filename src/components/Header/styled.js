@@ -86,6 +86,3 @@ export const HeaderButton = styled.a`
 export const HeaderMailIcone = styled(MailIcone)`
     stroke: ${({ theme }) => theme.color.white};
 `;
-
-
-

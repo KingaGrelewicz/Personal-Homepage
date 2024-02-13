@@ -1,8 +1,9 @@
-export const light = {
+export const lightTheme = {
     color: {
-        background: "#FBFBFE",
+        primaryBackground: "#FBFBFE",
         primaryTextColor: "#6E7E91",
         secondaryTextColor: "#252525",
+        background: "#FFFFFF",
         mainBlue: "#0366D6",
         btnPrimaryFocus: "#8CC2FF",
         white: "#FFFFFF",
@@ -11,11 +12,12 @@ export const light = {
     }
 };
 
-export const dark = {
+export const darkTheme = {
     color: {
-        background: "252525",
+        primaryBackground: "#252525",
         primaryTextColor: "#FFFFFF",
         secondaryTextColor: "#FFFFFF",
+        background: "#363636",
         mainBlue: "#2188FF",
         btnPrimaryFocus: "#6D93BE",
         white: "#FFFFFF",

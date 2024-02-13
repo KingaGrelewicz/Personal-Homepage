@@ -12,7 +12,7 @@ export const PortfolioWrapper = styled.div`
 export const PortfolioIcon = styled(PortfolioGitHubIcon)`
     display: flex;
     margin: 0 auto;
-    fill: ${({ theme }) => theme.color.scienceBlue};
+    fill: ${({ theme }) => theme.color.mainBlue};
 `;
 
 export const PortfolioHeader = styled.h2`
@@ -87,7 +87,7 @@ text-decoration: none;
 `;
 
 export const PortfolioTile = styled.div`
-    background: ${({ theme }) => theme.color.white};
+    background: ${({ theme }) => theme.color.background};
     padding: 24px;
     border: 6px solid ${({ theme }) => theme.color.iron};
     border-radius: 4px;

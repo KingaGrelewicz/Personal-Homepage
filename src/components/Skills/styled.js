@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const SkillsWrapper = styled.div`
     max-width: 1216px;
     margin: 72px auto;
-    background: ${({ theme }) => theme.color.white};
+    background: ${({ theme }) => theme.color.background};
 `;
 
 export const SkillsTitle = styled.h2`
+    color: ${({theme}) => theme.color.secondaryTextColor};
     margin: 0 32px 0 32px;
     padding: 32px 0 16px 0;
     font-size: 30px;
