@@ -9,13 +9,12 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState("light");
 
     const toggleTheme = () => {
-        setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
+        theme === "light" ? setTheme(light) : setTheme(dark);
     };
 
-    const currentTheme = theme === 'light' ? light : dark;
 
     return (
-        <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+        <ThemeContext.Provider value={{ toggleTheme }}>
           {children}
         </ThemeContext.Provider>
       );
