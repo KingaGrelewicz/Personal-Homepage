@@ -8,16 +8,26 @@ import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./theme.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getThemeFromLocalStorage, saveThemeInLocalStorage } from "./components/themeLocalStorage.js";
 
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(getThemeFromLocalStorage() || "light");
   const isLightTheme = theme === "light";
 
   const toggleTheme = () => {
-    setTheme(isLightTheme ? "dark" : "light");
+    const newTheme = isLightTheme ? "dark" : "light";
+    setTheme(newTheme);
+    saveThemeInLocalStorage(newTheme);
   };
+
+  useEffect(() => {
+    const themeFromStorage = getThemeFromLocalStorage();
+    if (themeFromStorage) {
+      setTheme(themeFromStorage);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
