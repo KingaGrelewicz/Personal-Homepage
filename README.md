@@ -1,5 +1,6 @@
 # Personal homepage
 This is a simple website showcasing my skills and projects. You'll find links to the code of my repositories, demos, and contact information. Additionally, you can explore my plans for future skill acquisition.
+Do you prefer dark mode? You can change it. I will be saved in Local Storage 😎
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
