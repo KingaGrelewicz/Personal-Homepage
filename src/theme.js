@@ -1,14 +1,22 @@
+export const mediaQuery = {
+    breakpoints: {
+        mobile: 320
+      },
+}
+
 export const lightTheme = {
     color: {
         primaryBackground: "#FBFBFE",
         primaryTextColor: "#6E7E91",
         secondaryTextColor: "#252525",
-        background: "#FFFFFF",
+        secondaryBackground: "#FFFFFF",
+        primaryBorder: "#D1D5DA",
+        togglerBackground: "#E5E5E5",
         mainBlue: "#0366D6",
-        btnPrimaryFocus: "#8CC2FF",
+        hoverBorder: "#8CC2FF",
         white: "#FFFFFF",
-        iron: "#D1D5DA",
-        anakiwa: "#8CC2FF",
+        shadow: "#090A33",
+        visited: "#144620",
     }
 };
 
@@ -17,10 +25,12 @@ export const darkTheme = {
         primaryBackground: "#252525",
         primaryTextColor: "#FFFFFF",
         secondaryTextColor: "#FFFFFF",
-        background: "#363636",
+        secondaryBackground: "#363636",
+        primaryBorder: "#D1D5DA",
+        togglerBackground: "#363636",
         mainBlue: "#2188FF",
-        btnPrimaryFocus: "#6D93BE",
+        hoverBorder: "#6D93BE",
         white: "#FFFFFF",
-        iron: "#D1D5DA",
+        shadow: "#090A33",
     }
 };
