@@ -20,12 +20,12 @@ const Footer = () => {
             <FooterContent>
                 I am always open to new challenges.<br />
                 If you need help implementing your ideas, feel free to contact me 👋
-                <FooterIcones>
-                    <FooterGitHubIcone />
-                    <FooterLinkedInIcone />
-                    <FooterFacebookIcone />
-                </FooterIcones>
             </FooterContent>
+            <FooterIcones>
+                <FooterGitHubIcone />
+                <FooterLinkedInIcone />
+                <FooterFacebookIcone />
+            </FooterIcones>
         </FooterWrapper>
     )
 };
