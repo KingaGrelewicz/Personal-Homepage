@@ -9,7 +9,8 @@ import {
   HeaderToggleMode,
   HeaderToggler,
   HeaderTogglerIcon,
-  HeaderModeIcon
+  HeaderModeIcon,
+  HeaderTogglerLabel
 } from "./styled";
 import image from "../../image/kinga.jpg"
 import { useState } from "react";
@@ -25,7 +26,9 @@ const Header = ({ theme, toggleTheme }) => {
   return (
     <StyledHeader>
       <HeaderToggleMode>
-        {isToggled ? "DARK MODE OFF" : "DARK MODE ON"}
+        <HeaderTogglerLabel>
+          {isToggled ? "DARK MODE OFF" : "DARK MODE ON"}
+        </HeaderTogglerLabel>
         <HeaderToggler onClick={handleToggleClick}>
           <HeaderTogglerIcon $isToggled={isToggled}>
             <HeaderModeIcon theme={theme} />

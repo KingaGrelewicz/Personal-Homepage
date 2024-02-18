@@ -24,6 +24,12 @@ export const HeaderToggleMode = styled.div`
     font-weight: 700;
 `;
 
+export const HeaderTogglerLabel = styled.span`
+    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
+        display: none;
+    }
+`;
+
 export const HeaderToggler = styled.button`
     cursor: pointer;
     height: 26px;
@@ -71,7 +77,7 @@ export const HeaderImage = styled.img`
 
 export const HeaderWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         grid-template-columns: 1fr;
