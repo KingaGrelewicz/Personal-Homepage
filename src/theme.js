@@ -1,6 +1,6 @@
 export const mediaQuery = {
     breakpoints: {
-        mobile: 320
+        mobile: 520
       },
 }
 
