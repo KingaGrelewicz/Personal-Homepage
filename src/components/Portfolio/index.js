@@ -18,12 +18,12 @@ import {
   PortfolioWarningWrapper,
   PortfolioWrapper
 } from "./styled";
-import { useRepositoriumData } from "./useRepositoriumData";
+import { useRepositoryData } from "./useRepositoryData";
 import SpinnerIcon from "../../image/icon-spinner.png";
 import DangerIcon from "../../image/Danger.png"
 
 export const Portfolio = () => {
-  const { status, repositories } = useRepositoriumData();
+  const { status, repositories } = useRepositoryData();
 
   return (
     <>

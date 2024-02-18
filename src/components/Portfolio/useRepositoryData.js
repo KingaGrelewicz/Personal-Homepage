@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const apiAddress = "https://api.github.com/users/KingaGrelewicz/repos";
 
-export const useRepositoriumData = () => {
+export const useRepositoryData = () => {
     const [repoData, setRepoData] = useState({
         status: "loading",
     });
@@ -19,7 +19,6 @@ export const useRepositoriumData = () => {
                     },
                 });
 
-                console.log(response.data)
                 setRepoData({
                     status: "success",
                     repositories: response.data,
