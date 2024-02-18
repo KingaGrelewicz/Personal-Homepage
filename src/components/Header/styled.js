@@ -4,7 +4,6 @@ import { ReactComponent as ModeIcon } from "../../image/modeIcon.svg";
 import { mediaQuery } from "../../theme";
 
 export const StyledHeader = styled.div`
-    max-width: 1188px;
     margin: 115px auto 0;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
@@ -22,6 +21,10 @@ export const HeaderToggleMode = styled.div`
     color: ${({ theme }) => theme.color.primaryTextColor};
     font-size: 12px;
     font-weight: 700;
+    
+    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
+        grid-template-columns: auto;
+    }
 `;
 
 export const HeaderTogglerLabel = styled.span`
@@ -65,8 +68,8 @@ export const HeaderModeIcon = styled(ModeIcon)`
 `;
 
 export const HeaderImage = styled.img`
-    width: 398px;
-    height: 398px;
+    width: 356px;
+    height: 356px;
     border-radius: 50%;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
