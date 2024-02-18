@@ -57,6 +57,7 @@ export const PorftolioLoading = styled.p`
     font-size: 20px;
     font-weight: 400;
     text-align: center;
+    color: ${({ theme }) => theme.color.secondaryTextColor};
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         font-size: 17px;
@@ -141,7 +142,7 @@ export const PortfolioTile = styled.div`
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-gap: 24px;
-    box-shadow: 0px 16px 58px 0px ${({theme}) => `${theme.color.shadow}08`};
+    box-shadow: 0px 16px 58px 0px ${({ theme }) => `${theme.color.shadow}08`};
     transition: border-color 0.3s ease-in-out;
 
     &:hover {
