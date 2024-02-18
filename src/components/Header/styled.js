@@ -7,7 +7,6 @@ export const StyledHeader = styled.div`
     margin: 115px auto 0;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        max-width: 320px;
         margin: 32px 16px;
     }
 `;

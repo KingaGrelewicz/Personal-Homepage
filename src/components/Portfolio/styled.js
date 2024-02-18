@@ -152,9 +152,7 @@ export const PortfolioTile = styled.div`
     }
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        margin: 24px;
-        max-width: 600px;
-        padding: 16px 24px;
+        margin: 0;
         grid-gap: 16px;
     }
 `;
