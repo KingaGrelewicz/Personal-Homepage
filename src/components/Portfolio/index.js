@@ -43,7 +43,11 @@ export const Portfolio = () => {
           <PortfolioWarning>Ooops! Something went wrong... </PortfolioWarning>
           <PortfolioWarningText>Sorry, failed to load Github projects.
             You can check them directly on Github.</PortfolioWarningText>
-          <PortfolioButton key="portfolio-button" href="https://github.com/KingaGrelewicz?tab=repositories">
+          <PortfolioButton 
+            href="https://github.com/KingaGrelewicz?tab=repositories"
+            target="_blank" 
+            rel="noopener noreferrer"  
+          >
             Go to GitHub
           </PortfolioButton>
         </PortfolioWarningWrapper>

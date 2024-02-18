@@ -89,6 +89,7 @@ export const PortfolioWarningWrapper = styled.div`
     display: grid;
     justify-content: center;
     justify-items: center;
+    color: ${({ theme }) => theme.color.secondaryTextColor};
     margin: 88px 0 140px 0;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
@@ -142,6 +143,7 @@ export const PortfolioTile = styled.div`
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-gap: 24px;
+    grid-auto-flow: row;
     box-shadow: 0px 16px 58px 0px ${({ theme }) => `${theme.color.shadow}08`};
     transition: border-color 0.3s ease-in-out;
 
@@ -151,7 +153,7 @@ export const PortfolioTile = styled.div`
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         margin: 24px;
-        max-width: 288px;
+        max-width: 600px;
         padding: 16px 24px;
         grid-gap: 16px;
     }
