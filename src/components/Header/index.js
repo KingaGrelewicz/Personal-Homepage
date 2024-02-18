@@ -7,16 +7,31 @@ import {
   HeaderTitle,
   HeaderWrapper,
   HeaderToggleMode,
-  HeaderToggleOffIcone
+  HeaderToggler,
+  HeaderTogglerIcon,
+  HeaderModeIcon
 } from "./styled";
 import image from "../../image/kinga.jpg"
-import { useTheme } from "../ThemeContext";
+import { useState } from "react";
 
-const Header = () => {
-  const { toggleTheme } = useTheme();
+const Header = ({ theme, toggleTheme }) => {
+  const [isToggled, setIsToggled] = useState(theme === "dark");
+
+  const handleToggleClick = () => {
+    setIsToggled(!isToggled);
+    toggleTheme();
+  };
 
   return (
     <StyledHeader>
+      <HeaderToggleMode>
+        {isToggled ? "DARK MODE OFF" : "DARK MODE ON"}
+        <HeaderToggler onClick={handleToggleClick}>
+          <HeaderTogglerIcon $isToggled={isToggled}>
+            <HeaderModeIcon theme={theme} />
+          </HeaderTogglerIcon>
+        </HeaderToggler>
+      </HeaderToggleMode>
       <HeaderWrapper>
         <HeaderImage src={image} alt="" />
         <HeaderContent>
@@ -33,12 +48,6 @@ const Header = () => {
             <HeaderMailIcone />Hire me
           </HeaderButton>
         </HeaderContent>
-        <HeaderToggleMode>
-          DARK MODE OFF
-          <button onClick={() => toggleTheme()}>
-            <HeaderToggleOffIcone />
-          </button>
-        </HeaderToggleMode>
       </HeaderWrapper>
     </StyledHeader>
   );
