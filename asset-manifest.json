@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.js": "/Personal-Homepage/static/js/main.bac3b6c6.js",
+    "main.js": "/Personal-Homepage/static/js/main.edb55c92.js",
     "static/js/787.25d2574b.chunk.js": "/Personal-Homepage/static/js/787.25d2574b.chunk.js",
-    "static/media/kinga.jpg": "/Personal-Homepage/static/media/kinga.81dfc70066cf6a8a59bb.jpg",
-    "static/media/ToggleOff-light.svg": "/Personal-Homepage/static/media/ToggleOff-light.fabd8d1e8ed57152432205d147921b02.svg",
-    "static/media/DarkMode.svg": "/Personal-Homepage/static/media/DarkMode.57bcb33749bc5392cd8017f73eef6484.svg",
+    "static/media/kinga.jpg": "/Personal-Homepage/static/media/kinga.fb1bc550c53c3eebd9a1.jpg",
+    "static/media/modeIcon.svg": "/Personal-Homepage/static/media/modeIcon.3692bd78d9f9bb1548bfc7690e52557a.svg",
     "static/media/Github_black.svg": "/Personal-Homepage/static/media/Github_black.279ab90ca969c53624bf9006aa164b2d.svg",
     "index.html": "/Personal-Homepage/index.html",
     "static/media/LinkedIN_black.svg": "/Personal-Homepage/static/media/LinkedIN_black.7edaf36c9970e500b592be0caad85be0.svg",
     "static/media/message.svg": "/Personal-Homepage/static/media/message.514461521cb8d76b55e16ac430346abb.svg",
     "static/media/Facebook_black.svg": "/Personal-Homepage/static/media/Facebook_black.ef9019462509e10d89d00f7c245abc63.svg",
-    "main.bac3b6c6.js.map": "/Personal-Homepage/static/js/main.bac3b6c6.js.map",
+    "main.edb55c92.js.map": "/Personal-Homepage/static/js/main.edb55c92.js.map",
     "787.25d2574b.chunk.js.map": "/Personal-Homepage/static/js/787.25d2574b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bac3b6c6.js"
+    "static/js/main.edb55c92.js"
   ]
 }
