@@ -19,10 +19,11 @@ export const FooterParagraph = styled.p`
     font-weight: 700;
 `;
 
-export const FooterMail = styled.span`
+export const FooterMail = styled.a`
     color: ${({ theme }) => theme.color.secondaryTextColor};
     font-size: 32px;
     font-weight: 900;
+    text-decoration: none;
 
     &:hover {
         color: ${({ theme }) => theme.color.mainBlue};
