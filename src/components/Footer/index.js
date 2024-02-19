@@ -22,14 +22,23 @@ const Footer = () => {
                 If you need help implementing your ideas, feel free to contact me 👋
             </FooterContent>
             <FooterIcones>
-                <a href="https://github.com/KingaGrelewicz" target="_blank" rel="noopener noreferrer">
+                <a 
+                href="https://github.com/KingaGrelewicz" 
+                target="_blank" 
+                rel="noopener noreferrer">
                     <FooterGitHubIcone />
                 </a>
-                <a href="https://www.linkedin.com/in/kinga-grelewicz/" target="_blank" rel="noopener noreferrer">
-                <FooterLinkedInIcone />
+                <a 
+                href="https://www.linkedin.com/in/kinga-grelewicz/" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                    <FooterLinkedInIcone />
                 </a>
-                <a href="https://www.facebook.com/kinga.grelewicz.5/" target="_blank" rel="noopener noreferrer">
-                <FooterFacebookIcone />
+                <a 
+                href="https://www.facebook.com/kinga.grelewicz.5/" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                    <FooterFacebookIcone />
                 </a>
             </FooterIcones>
         </FooterWrapper>
