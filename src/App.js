@@ -3,31 +3,17 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Header from "./components/Header/index.js";
 import { Portfolio } from "./components/Portfolio";
-import { Skills, professionalSkills, skillsToLearn } from "./components/Skills/index.js";
+import { Skills } from "./components/Skills/index.js";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./theme.js";
-import { useEffect, useState } from "react";
-import { getThemeFromLocalStorage, saveThemeInLocalStorage } from "./components/themeLocalStorage.js";
+import { SkillsList, professionalSkills, skillsToLearn } from "./components/SkillsList/index.js";
+import useTheme from "./components/useTheme.js";
 
 
 function App() {
-  const [theme, setTheme] = useState(getThemeFromLocalStorage() || "light");
-  const isLightTheme = theme === "light";
-
-  const toggleTheme = () => {
-    const newTheme = isLightTheme ? "dark" : "light";
-    setTheme(newTheme);
-    saveThemeInLocalStorage(newTheme);
-  };
-
-  useEffect(() => {
-    const themeFromStorage = getThemeFromLocalStorage();
-    if (themeFromStorage) {
-      setTheme(themeFromStorage);
-    }
-  }, []);
+  const { isLightTheme, toggleTheme } = useTheme();
 
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
@@ -40,16 +26,20 @@ function App() {
           title="My skillset includes"
           img={Tools}
           skills={professionalSkills}
-        />
+        >
+          <SkillsList />
+        </Skills>
         <Skills
           title="What I want to learn next"
           img={Rocket}
           skills={skillsToLearn}
-        />
+        >
+          <SkillsList />
+        </Skills>
         <Portfolio />
         <Footer />
       </Container>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
