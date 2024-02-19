@@ -137,7 +137,7 @@ export const PortfolioButton = styled.a`
 
 export const PortfolioTile = styled.div`
     background: ${({ theme }) => theme.color.secondaryBackground};
-    padding: 24px;
+    padding: 56px;
     border: 6px solid ${({ theme }) => `${theme.color.primaryBorder}33`};
     border-radius: 4px;
     display: grid;
@@ -152,8 +152,9 @@ export const PortfolioTile = styled.div`
     }
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        margin: 0;
+        margin: 0 16px;
         grid-gap: 16px;
+        padding: 24px;
     }
 `;
 
