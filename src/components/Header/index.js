@@ -6,35 +6,15 @@ import {
   HeaderMailIcone,
   HeaderTitle,
   HeaderWrapper,
-  HeaderToggleMode,
-  HeaderToggler,
-  HeaderTogglerIcon,
-  HeaderModeIcon,
-  HeaderTogglerLabel
 } from "./styled";
 import image from "../../image/kinga.jpg"
-import { useState } from "react";
+import Toggler from "../Toggler";
 
-const Header = ({ theme, toggleTheme }) => {
-  const [isToggled, setIsToggled] = useState(theme === "dark");
 
-  const handleToggleClick = () => {
-    setIsToggled(!isToggled);
-    toggleTheme();
-  };
-
+const Header = () => {
   return (
     <StyledHeader>
-      <HeaderToggleMode>
-        <HeaderTogglerLabel>
-          {isToggled ? "DARK MODE OFF" : "DARK MODE ON"}
-        </HeaderTogglerLabel>
-        <HeaderToggler onClick={handleToggleClick}>
-          <HeaderTogglerIcon $isToggled={isToggled}>
-            <HeaderModeIcon theme={theme} />
-          </HeaderTogglerIcon>
-        </HeaderToggler>
-      </HeaderToggleMode>
+      <Toggler />
       <HeaderWrapper>
         <HeaderImage src={image} alt="" />
         <HeaderContent>

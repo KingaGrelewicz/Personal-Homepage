@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ReactComponent as MailIcone } from "../../image/message.svg";
-import { ReactComponent as ModeIcon } from "../../image/modeIcon.svg";
 import { mediaQuery } from "../../theme";
 
 export const StyledHeader = styled.div`
@@ -9,61 +8,6 @@ export const StyledHeader = styled.div`
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         margin: 32px 16px;
     }
-`;
-
-export const HeaderToggleMode = styled.div`
-    display: grid;
-    grid-template-columns: 1fr auto;
-    justify-items: end;
-    grid-gap: 12px;
-    padding: 15px;
-    color: ${({ theme }) => theme.color.primaryTextColor};
-    font-size: 12px;
-    font-weight: 700;
-    
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        grid-template-columns: auto;
-    }
-`;
-
-export const HeaderTogglerLabel = styled.span`
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        display: none;
-    }
-`;
-
-export const HeaderToggler = styled.button`
-    cursor: pointer;
-    height: 26px;
-    width: 48px;
-    border-radius: 15px;
-    border: 1px solid ${({ theme }) => theme.color.white};
-    background: ${({ theme }) => theme.color.togglerBackground};
-    display: flex;
-    align-items: center;
-    padding: 3px;
-    margin: -5px; 
-`;
-
-export const HeaderTogglerIcon = styled.div`
-    height: 20px;
-    width: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-    padding: 3px;
-    background: ${({ theme }) => theme.color.primaryTextColor};
-    transition: 0.7s;
-    transform: ${({ $isToggled }) => ($isToggled 
-    ? 'translateX(100%) rotate(180deg)' 
-    : 'translateX(0%) rotate(0deg)'
-    )};
-`;
-
-export const HeaderModeIcon = styled(ModeIcon)`
-    width: 24px;
-    height: 24px;
-    fill: ${({ theme }) => theme.color.secondaryBackground};
 `;
 
 export const HeaderImage = styled.img`
@@ -114,7 +58,7 @@ export const HeaderButton = styled.a`
     text-decoration: none;
     background: ${({ theme }) => theme.color.mainBlue};
     color: ${({ theme }) => theme.color.white};
-    border: 1px solid ${({ theme }) => theme.color.primaryBorder};
+    border: 1px solid ${({ theme }) => `${theme.color.primaryBorder}3`};
     border-radius: 4px; 
     padding: 12px 16px;
     font-size: 20px;
@@ -126,14 +70,11 @@ export const HeaderButton = styled.a`
     margin-top: 32px;
     transition: color 0.5s;
 
-    &:visited {
-        border-color: 1px ridge ${({ theme }) => `${theme.color.visited}2`};
-    }
-
     &:hover {
         outline: none;
-        border: 3px solid ${({ theme }) => theme.color.hoverBorder};
         filter: brightness(120%);
+        box-shadow: 2px 2px 0px 0px ${({ theme }) => theme.color.hoverBorder};
+
     }
 
     &:active {
