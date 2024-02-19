@@ -13,7 +13,7 @@ export const lightTheme = {
         primaryBorder: "#D1D5DA",
         togglerBackground: "#E5E5E5",
         mainBlue: "#0366D6",
-        hoverBorder: "#8CC2FF",
+        hoverBorder: "#6D93BE",
         white: "#FFFFFF",
         shadow: "#090A33",
         visited: "#144620",
