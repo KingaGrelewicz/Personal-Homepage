@@ -1,4 +1,5 @@
 import _ from "lodash";
+import { useSelector } from "react-redux";
 import {
   PorftolioLoading,
   PortfolioButton,
@@ -18,12 +19,15 @@ import {
   PortfolioWarningWrapper,
   PortfolioWrapper
 } from "./styled";
-import { useRepositoryData } from "./useRepositoryData";
 import SpinnerIcon from "../../image/icon-spinner.png";
 import DangerIcon from "../../image/Danger.png"
 
 export const Portfolio = () => {
-  const { status, repositories } = useRepositoryData();
+  const loading = useSelector(state => state.repos.loading);
+  const error = useSelector(state => state.repos.error);
+  const repos = useSelector(state => state.repos.data);
+
+  const success = !loading && !error;
 
   return (
     <>
@@ -31,31 +35,32 @@ export const Portfolio = () => {
       <PortfolioHeader>Portfolio</PortfolioHeader>
       <PortfolioSubheader>My recent projects</PortfolioSubheader>
 
-      {status === "loading" &&
+      {loading &&
         <>
           <PorftolioLoading>Please wait, projects are being loaded...</PorftolioLoading>
           <PortfolioLoadingSpinner src={SpinnerIcon} alt="Spiner Icon" />
         </>
       }
-      {status === "error" &&
+      
+      {error &&
         <PortfolioWarningWrapper>
           <PortfolioWarningImage src={DangerIcon} alt="Danger Icon" />
           <PortfolioWarning>Ooops! Something went wrong... </PortfolioWarning>
           <PortfolioWarningText>Sorry, failed to load Github projects.
             You can check them directly on Github.</PortfolioWarningText>
-          <PortfolioButton 
+          <PortfolioButton
             href="https://github.com/KingaGrelewicz?tab=repositories"
-            target="_blank" 
-            rel="noopener noreferrer"  
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Go to GitHub
           </PortfolioButton>
         </PortfolioWarningWrapper>
       }
 
-      {status === "success" && (
+      {success && (
         <PortfolioWrapper>
-          {repositories.map((repo) => (
+          {repos.map((repo) => (
             <PortfolioTile key={repo.id}>
               <PortfolioTileHeader>{_.startCase(repo.name.toLowerCase())}</PortfolioTileHeader>
               <PortfolioProjectDescription>{repo.description}</PortfolioProjectDescription>

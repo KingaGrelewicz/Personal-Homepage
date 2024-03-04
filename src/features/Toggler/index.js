@@ -6,15 +6,16 @@ import {
     HeaderTogglerIcon, 
     HeaderTogglerLabel 
 } from "./styled";
-import useTheme from "../useTheme";
+import { toggleTheme } from "./themeSlice";
+import { useDispatch } from "react-redux";
 
 const Toggler = ({ theme }) => {
     const [isToggled, setIsToggled] = useState(theme === "dark");
-    const { toggleTheme } = useTheme();
+    const dispatch = useDispatch();
 
     const handleToggleClick = () => {
         setIsToggled(!isToggled);
-        toggleTheme();
+        dispatch(toggleTheme());
     };
 
     return (
@@ -32,4 +33,3 @@ const Toggler = ({ theme }) => {
 }
 
 export default Toggler;
-
