@@ -1,26 +1,26 @@
+import { useSelector } from "react-redux";
 import { Globalstyle } from "./GlobalStyle";
-import Container from "./components/Container";
-import Footer from "./components/Footer";
-import Header from "./components/Header/index.js";
-import { Portfolio } from "./components/Portfolio";
-import { Skills } from "./components/Skills/index.js";
+import Container from "./common/Container";
+import Footer from "./common/Footer";
+import Header from "./features/Header/index.js";
+import { Portfolio } from "./features/Portfolio";
+import { Skills } from "./features/Skills/index.js";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./theme.js";
-import { SkillsList, professionalSkills, skillsToLearn } from "./components/SkillsList/index.js";
-import useTheme from "./components/useTheme.js";
+import { SkillsList, professionalSkills, skillsToLearn } from "./features/SkillsList/index.js";
+import { selectTheme } from "./features/Toggler/themeSlice.js";
 
 
 function App() {
-  const { isLightTheme, toggleTheme } = useTheme();
+  const theme = useSelector(selectTheme);
 
   return (
-    <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme}>
       <Container>
         <Globalstyle />
         <Header
-          toggleTheme={toggleTheme}
+
         />
         <Skills
           title="My skillset includes"
