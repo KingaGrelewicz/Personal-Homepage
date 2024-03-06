@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { darkTheme, lightTheme } from '../../theme';
+import { getThemeFromLocalStorage, saveThemeInLocalStorage } from '../themeLocalStorage';
 
 const themeSlice = createSlice({
     name: 'theme',
     initialState: {
-        theme: lightTheme,
+        theme: getThemeFromLocalStorage() || lightTheme,
     },
     reducers: {
         toggleTheme: (state) => {
             state.theme = state.theme === lightTheme ? darkTheme : lightTheme;
+            saveThemeInLocalStorage(state.theme);
         },
     },
 });
