@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   PorftolioLoading,
   PortfolioButton,
@@ -21,11 +21,18 @@ import {
 } from "./styled";
 import SpinnerIcon from "../../image/icon-spinner.png";
 import DangerIcon from "../../image/Danger.png"
+import { useEffect } from "react";
+import { fetchReposStart } from "./reposSlice";
 
 export const Portfolio = () => {
+  const dispatch = useDispatch();
   const loading = useSelector(state => state.repos.loading);
   const error = useSelector(state => state.repos.error);
   const repos = useSelector(state => state.repos.data);
+
+  useEffect(() => {
+    dispatch(fetchReposStart());
+  }, [dispatch]);
 
   const success = !loading && !error;
 
@@ -41,7 +48,7 @@ export const Portfolio = () => {
           <PortfolioLoadingSpinner src={SpinnerIcon} alt="Spiner Icon" />
         </>
       }
-      
+
       {error &&
         <PortfolioWarningWrapper>
           <PortfolioWarningImage src={DangerIcon} alt="Danger Icon" />
