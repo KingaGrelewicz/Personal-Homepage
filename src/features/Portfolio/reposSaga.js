@@ -1,6 +1,6 @@
 import { call, delay, put, takeEvery } from "redux-saga/effects";
 import { getRepos } from './getRepos';
-import { fetchRepos, fetchReposFailure, fetchReposStart, fetchReposSuccess } from "./reposSlice";
+import { fetchReposFailure, fetchReposStart, fetchReposSuccess } from "./reposSlice";
 
 export function* fetchReposHandler() {
     try {   
