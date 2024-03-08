@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { 
-    HeaderModeIcon, 
-    HeaderToggleMode, 
-    HeaderToggler, 
-    HeaderTogglerIcon, 
-    HeaderTogglerLabel 
+import {
+    HeaderModeIcon,
+    HeaderToggleMode,
+    HeaderToggler,
+    HeaderTogglerIcon,
+    HeaderTogglerLabel
 } from "./styled";
 import { toggleTheme } from "./themeSlice";
 import { useDispatch } from "react-redux";
