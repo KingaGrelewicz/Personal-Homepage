@@ -18,7 +18,7 @@ const reposSlice = createSlice({
         },
         fetchReposSuccess: (state, { payload: repos }) => {
             state.loading = false;
-            state.repos = repos;
+            state.data = repos;
         },
     }
 });
