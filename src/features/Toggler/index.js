@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
     HeaderModeIcon,
     HeaderToggleMode,
@@ -6,25 +5,25 @@ import {
     HeaderTogglerIcon,
     HeaderTogglerLabel
 } from "./styled";
-import { toggleTheme } from "./themeSlice";
-import { useDispatch } from "react-redux";
+import { selectTheme, toggleTheme } from "./themeSlice";
+import { useDispatch, useSelector } from "react-redux";
 
-const Toggler = ({ theme }) => {
-    const [isToggled, setIsToggled] = useState(theme === "dark");
+const Toggler = () => {
+    const theme = useSelector(selectTheme);
     const dispatch = useDispatch();
 
     const handleToggleClick = () => {
-        setIsToggled(!isToggled);
-        dispatch(toggleTheme());
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        dispatch(toggleTheme(newTheme));
     };
 
     return (
         <HeaderToggleMode>
             <HeaderTogglerLabel>
-                {isToggled ? "DARK MODE OFF" : "DARK MODE ON"}
+                {theme === "dark" ? "DARK MODE OFF" : "DARK MODE ON"}
             </HeaderTogglerLabel>
             <HeaderToggler onClick={handleToggleClick}>
-                <HeaderTogglerIcon $isToggled={isToggled}>
+                <HeaderTogglerIcon>
                     <HeaderModeIcon theme={theme} />
                 </HeaderTogglerIcon>
             </HeaderToggler>
