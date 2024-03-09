@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from "redux-saga";
 import reposReducer from'./features/Portfolio/reposSlice';
 import themeReducer from './features/Toggler/themeSlice';
-import { watchFetchRepos } from './features/Portfolio/reposSaga';
+import rootSaga from './rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -15,6 +15,6 @@ const store = configureStore({
         getDefaultMiddleware().concat(sagaMiddleware),
 });
 
-sagaMiddleware.run(watchFetchRepos);
+sagaMiddleware.run(rootSaga);
 
 export default store;
