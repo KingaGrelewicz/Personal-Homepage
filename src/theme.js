@@ -2,7 +2,7 @@ export const mediaQuery = {
     breakpoints: {
         mobile: 520
       },
-}
+};
 
 export const lightTheme = {
     color: {
