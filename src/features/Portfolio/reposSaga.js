@@ -1,4 +1,4 @@
-import { call, delay, put, takeEvery } from "redux-saga/effects";
+import { call, delay, put, takeLatest } from "redux-saga/effects";
 import { getRepos } from './getRepos';
 import { fetchReposFailure, fetchReposStart, fetchReposSuccess } from "./reposSlice";
 
@@ -14,5 +14,5 @@ export function* fetchReposHandler() {
 }
 
 export function* watchFetchRepos() {
-    yield takeEvery('repos/fetchRepos', fetchReposHandler);
+    yield takeLatest('repos/fetchRepos', fetchReposHandler);
 }
