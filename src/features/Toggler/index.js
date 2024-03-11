@@ -13,8 +13,7 @@ const Toggler = () => {
     const dispatch = useDispatch();
 
     const handleToggleClick = () => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        dispatch(toggleTheme(newTheme));
+        dispatch(toggleTheme());
     };
 
     return (
