@@ -9,14 +9,15 @@ import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 import { ThemeProvider } from "styled-components";
 import { SkillsList, professionalSkills, skillsToLearn } from "./features/SkillsList/index.js";
-import { selectTheme } from "./features/Toggler/themeSlice.js";
+import { selectIsDarkTheme } from "./features/Toggler/themeSlice.js";
+import { darkTheme, lightTheme } from "./theme.js";
 
 
 function App() {
-  const theme = useSelector(selectTheme);
+  const isDarkTheme = useSelector(selectIsDarkTheme);  
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Container>
         <Globalstyle />
         <Header
