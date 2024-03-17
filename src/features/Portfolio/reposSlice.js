@@ -29,6 +29,6 @@ export const {
     fetchReposSuccess,
 } = reposSlice.actions;
 
-export const selectReposState = state => state.repos;
+export const selectReposState = state => state.repos.data;
 
 export default reposSlice.reducer;
