@@ -7,12 +7,12 @@ export function* fetchReposHandler() {
         yield put(fetchReposStart());
         yield delay(1000);
         const reposData = yield call(getRepos);
-        yield put(fetchReposSuccess(reposData));
+        yield put(fetchReposSuccess(reposData.data));
     } catch (error) {
         yield put(fetchReposFailure("ups"));
     }
 }
 
 export function* watchFetchRepos() {
-    yield takeLatest('repos/fetchRepos', fetchReposHandler);
+    yield takeLatest('fetchReposStart', fetchReposHandler);
 }
