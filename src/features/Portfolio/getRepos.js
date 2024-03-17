@@ -1,9 +1,10 @@
-export const getRepos = async () => {
-    const response = await fetch("https://api.github.com/users/KingaGrelewicz/repos");
+import axios from "axios";
 
-    if(!response.ok) {
-        new Error(response.statusText);
-    
+export const getRepos = async () => {
+    try {
+      const response = await axios.get('https://api.github.com/users/KingaGrelewicz/repos');
+      return response.data;
+    } catch (error) {
+      throw new Error(error.message);
     }
-    return await response.json();
-}
+};
