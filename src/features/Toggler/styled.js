@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../theme";
-import { ReactComponent as ModeIcon } from "../../image/modeIcon.svg"
+import { ReactComponent as ModeIcon } from "../../image/modeIcon.svg";
 
 export const HeaderToggleMode = styled.div`
     display: grid;
@@ -45,9 +45,9 @@ export const HeaderTogglerIcon = styled.div`
     padding: 3px;
     background: ${({ theme }) => theme.color.primaryTextColor};
     transition: 0.7s;
-    transform: ${({ $isToggled }) => ($isToggled 
-    ? 'translateX(100%) rotate(180deg)' 
-    : 'translateX(0%) rotate(0deg)'
+    transform: ${({ isDarkTheme }) => (isDarkTheme
+        ? 'translateX(100%) rotate(180deg)'
+        : 'translateX(0%) rotate(0deg)'
     )};
 `;
 

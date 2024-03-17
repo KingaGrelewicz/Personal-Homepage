@@ -19,10 +19,10 @@ const Toggler = () => {
     return (
         <HeaderToggleMode>
             <HeaderTogglerLabel>
-                {isDarkTheme === "dark" ? "DARK MODE OFF" : "DARK MODE ON"}
+                {isDarkTheme ? "DARK MODE OFF" : "DARK MODE ON"}
             </HeaderTogglerLabel>
             <HeaderToggler onClick={handleToggleClick}>
-                <HeaderTogglerIcon>
+                <HeaderTogglerIcon isDarkTheme={isDarkTheme}>
                     <HeaderModeIcon />
                 </HeaderTogglerIcon>
             </HeaderToggler>
