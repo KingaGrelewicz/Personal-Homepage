@@ -1,12 +1,11 @@
-import { call, select, takeEvery } from "redux-saga/effects";
-import { selectIsDarkTheme } from "./themeSlice";
-import { saveThemeInLocalStorage } from "../themeLocalStorage";
+import { select, takeEvery } from "redux-saga/effects";
+import { selectIsDarkTheme, toggleTheme } from "./themeSlice";
 
 function* saveThemeInLocalStorageHandler() {
-    const theme = yield select(selectIsDarkTheme);
-    yield call(saveThemeInLocalStorage, theme);
+    const isDarkTheme = yield select(selectIsDarkTheme);
+    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
 }
 
 export function* watchSaveThemeInLocalStorage() {
-    yield takeEvery('theme/toggleTheme', saveThemeInLocalStorageHandler);
+    yield takeEvery(toggleTheme.type, saveThemeInLocalStorageHandler);
 }
