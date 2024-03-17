@@ -14,5 +14,5 @@ export function* fetchReposHandler() {
 }
 
 export function* watchFetchRepos() {
-    yield takeLatest('fetchReposStart', fetchReposHandler);
+    yield takeLatest('repos/fetchRepos', fetchReposHandler);
 }
