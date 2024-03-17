@@ -22,19 +22,17 @@ import {
 import SpinnerIcon from "../../image/icon-spinner.png";
 import DangerIcon from "../../image/Danger.png"
 import { useEffect } from "react";
-import { fetchReposStart } from "./reposSlice";
+import { fetchReposStart, selectReposState } from "./reposSlice";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
-  const loading = useSelector(state => state.repos.loading);
-  const error = useSelector(state => state.repos.error);
-  const repos = useSelector(state => state.repos.data);
+  const loading = useSelector((state) => state.repos.loading);
+  const error = useSelector((state) => state.repos.error);
+  const repos = useSelector(selectReposState);
 
   useEffect(() => {
     dispatch(fetchReposStart());
   }, [dispatch]);
-
-  const success = !loading && !error;
 
   return (
     <>
@@ -65,22 +63,31 @@ export const Portfolio = () => {
         </PortfolioWarningWrapper>
       }
 
-      {success && (
+      {!loading && !error && (
         <PortfolioWrapper>
           {repos.map((repo) => (
             <PortfolioTile key={repo.id}>
               <PortfolioTileHeader>{_.startCase(repo.name.toLowerCase())}</PortfolioTileHeader>
               <PortfolioProjectDescription>{repo.description}</PortfolioProjectDescription>
               <PortfolioTileLinks>
-                <PortfolioTileElement>Demo:
+                <PortfolioTileElement>
+                  Demo:
                   {repo.homepage && (
-                    <PortfolioTileLink href={repo.homepage} target="_blank" rel="noopener noreferrer">
+                    <PortfolioTileLink
+                      href={repo.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       {repo.homepage}
                     </PortfolioTileLink>
                   )}
                 </PortfolioTileElement>
-                <PortfolioTileElement>Code:
-                  <PortfolioTileLink href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                <PortfolioTileElement>
+                  Code:
+                  <PortfolioTileLink
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {repo.html_url}
                   </PortfolioTileLink>
                 </PortfolioTileElement>
