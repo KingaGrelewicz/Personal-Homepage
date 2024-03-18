@@ -22,16 +22,16 @@ import {
 import SpinnerIcon from "../../image/icon-spinner.png";
 import DangerIcon from "../../image/Danger.png"
 import { useEffect } from "react";
-import { fetchReposStart, selectReposState } from "./reposSlice";
+import { selectReposState, setRepos } from "./reposSlice";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
-  const loading = useSelector((state) => state.repos.loading);
-  const error = useSelector((state) => state.repos.error);
+  const loading = useSelector(state => state.repos.loading);
+  const error = useSelector(state => state.repos.error);
   const repos = useSelector(selectReposState);
 
   useEffect(() => {
-    dispatch(fetchReposStart());
+    dispatch(setRepos());
   }, [dispatch]);
 
   return (
