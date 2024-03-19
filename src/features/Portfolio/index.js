@@ -1,11 +1,8 @@
 import _ from "lodash";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  PorftolioLoading,
-  PortfolioButton,
   PortfolioHeader,
   PortfolioIcon,
-  PortfolioLoadingSpinner,
   PortfolioProjectDescription,
   PortfolioSubheader,
   PortfolioTile,
@@ -13,16 +10,12 @@ import {
   PortfolioTileHeader,
   PortfolioTileLink,
   PortfolioTileLinks,
-  PortfolioWarning,
-  PortfolioWarningImage,
-  PortfolioWarningText,
-  PortfolioWarningWrapper,
   PortfolioWrapper
 } from "./styled";
-import SpinnerIcon from "../../image/icon-spinner.png";
-import DangerIcon from "../../image/Danger.png"
 import { useEffect } from "react";
 import { selectReposState, setRepos } from "./reposSlice";
+import Loading from "../Loading";
+import Error from "../Error";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
@@ -40,28 +33,9 @@ export const Portfolio = () => {
       <PortfolioHeader>Portfolio</PortfolioHeader>
       <PortfolioSubheader>My recent projects</PortfolioSubheader>
 
-      {loading &&
-        <>
-          <PorftolioLoading>Please wait, projects are being loaded...</PorftolioLoading>
-          <PortfolioLoadingSpinner src={SpinnerIcon} alt="Spiner Icon" />
-        </>
-      }
+      {loading && <Loading />}
 
-      {error &&
-        <PortfolioWarningWrapper>
-          <PortfolioWarningImage src={DangerIcon} alt="Danger Icon" />
-          <PortfolioWarning>Ooops! Something went wrong... </PortfolioWarning>
-          <PortfolioWarningText>Sorry, failed to load Github projects.
-            You can check them directly on Github.</PortfolioWarningText>
-          <PortfolioButton
-            href="https://github.com/KingaGrelewicz?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Go to GitHub
-          </PortfolioButton>
-        </PortfolioWarningWrapper>
-      }
+      {error && <Error />}
 
       {!loading && !error && (
         <PortfolioWrapper>

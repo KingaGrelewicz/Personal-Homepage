@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as PortfolioGitHubIcon } from "../../image/Github_black.svg";
 import { mediaQuery } from "../../theme";
 
@@ -51,88 +51,6 @@ export const PortfolioSubheader = styled.h3`
         font-size: 17px;
         margin: 16px 0 24px 0;
     }
-`;
-
-export const PorftolioLoading = styled.p`
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    color: ${({ theme }) => theme.color.secondaryTextColor};
-
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        font-size: 17px;
-    }
-`;
-
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-export const PortfolioLoadingSpinner = styled.img`
-    animation: ${rotate360} 5s linear infinite;
-    display: flex;
-    margin: 0 auto;
-
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        width: 86px;
-        height: 86px;
-    }
-`;
-
-export const PortfolioWarningWrapper = styled.div`
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    color: ${({ theme }) => theme.color.secondaryTextColor};
-    margin: 88px 0 140px 0;
-
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        margin: 48px 0;
-    }
-`;
-
-export const PortfolioWarningImage = styled.img`
-    width: 37px;
-    height: 34px;
-`;
-
-export const PortfolioWarning = styled.p`
-    font-size: 24px;
-    font-weight: 700;
-    margin: 16px;
-
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        font-size: 18px;
-        text-align: center;
-    }
-`;
-
-export const PortfolioWarningText = styled.p`
-    font-size: 20px;
-    font-weight: 400;
-    margin: 16px;
-
-    @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        font-size: 17px;
-        text-align: center;
-    }
-`;
-
-export const PortfolioButton = styled.a`
-    text-decoration: none;
-    background: ${({ theme }) => theme.color.mainBlue};
-    color: ${({ theme }) => theme.color.white};
-    border: 1px solid ${({ theme }) => theme.color.mainBlue};
-    border-radius: 4%; 
-    padding: 12px 16px;
-    font-size: 20px;
-    font-weight: 600;
 `;
 
 export const PortfolioTile = styled.div`
