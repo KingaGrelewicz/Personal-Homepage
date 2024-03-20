@@ -45,7 +45,7 @@ export const HeaderTogglerIcon = styled.div`
     padding: 3px;
     background: ${({ theme }) => theme.color.primaryTextColor};
     transition: 0.7s;
-    transform: ${({ isDarkTheme }) => (isDarkTheme
+    transform: ${({ $isDarkTheme }) => ($isDarkTheme
         ? 'translateX(100%) rotate(180deg)'
         : 'translateX(0%) rotate(0deg)'
     )};
