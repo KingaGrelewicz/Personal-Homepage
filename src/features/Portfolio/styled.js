@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as PortfolioGitHubIcon } from "../../image/Github_black.svg";
 import { mediaQuery } from "../../theme";
 
-export const PortfolioWrapper = styled.div`
+export const ProjectWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 592px);
     grid-gap: 32px;
@@ -53,7 +53,7 @@ export const PortfolioSubheader = styled.h3`
     }
 `;
 
-export const PortfolioTile = styled.div`
+export const ProjectTile = styled.div`
     background: ${({ theme }) => theme.color.secondaryBackground};
     padding: 56px;
     border: 6px solid ${({ theme }) => `${theme.color.primaryBorder}33`};
@@ -76,7 +76,7 @@ export const PortfolioTile = styled.div`
     }
 `;
 
-export const PortfolioTileHeader = styled.h3`
+export const ProjectTileHeader = styled.h3`
     color: ${({ theme }) => theme.color.mainBlue};
     font-size: 20px;
     margin-bottom: 8px;
@@ -86,7 +86,7 @@ export const PortfolioTileHeader = styled.h3`
     }
 `;
 
-export const PortfolioProjectDescription = styled.div`
+export const ProjectDescription = styled.div`
     color: ${({ theme }) => theme.color.primaryTextColor};
     font-size: 18px;   
     font-weight: 400;
@@ -99,9 +99,9 @@ export const PortfolioProjectDescription = styled.div`
     }
 `;
 
-export const PortfolioTileLinks = styled.div``;
+export const ProjectTileLinks = styled.div``;
 
-export const PortfolioTileLink = styled.a`
+export const ProjectTileLink = styled.a`
     color: ${({ theme }) => theme.color.mainBlue};
     font-size: 18px;
     padding: 0 5px;
@@ -119,7 +119,7 @@ export const PortfolioTileLink = styled.a`
     }
 `;
 
-export const PortfolioTileElement = styled.div`
+export const ProjectTileElement = styled.div`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.color.secondaryTextColor};
