@@ -3,14 +3,16 @@ import {
   PortfolioHeader,
   PortfolioIcon,
   PortfolioSubheader,
+  PortfolioTile,
+  PortfolioTileElement,
+  PortfolioTileHeader,
+  PortfolioTileLink,
+  PortfolioTileLinks,
 } from "./styled";
 import { useEffect } from "react";
 import { selectReposState, setRepos } from "./reposSlice";
-import PersonalHomepage from "./PersonalHomepage";
-import CurrencyConverter from "./CurrencyConverter";
 import Loading from "../Loading";
 import Error from "../Error";
-import ToDoList from "./ToDoList";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
@@ -33,42 +35,37 @@ export const Portfolio = () => {
       {error && <Error />}
 
       {!loading && !error && (
-        <>
-        <CurrencyConverter>
+        <PortfolioWrapper>
           {repos.map((repo) => (
-            <div
-              key={repo.id}
-              title={repo.name}
-              description={repo.description}
-              demo={repo.homepage}
-              code={repo.html_url}
-            />
+            <PortfolioTile key={repo.id}>
+              <PortfolioTileHeader>{_.startCase(repo.name.toLowerCase())}</PortfolioTileHeader>
+              <PortfolioProjectDescription>{repo.description}</PortfolioProjectDescription>
+              <PortfolioTileLinks>
+                <PortfolioTileElement>
+                  Demo:
+                  {repo.homepage && (
+                    <PortfolioTileLink
+                      href={repo.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {repo.homepage}
+                    </PortfolioTileLink>
+                  )}
+                </PortfolioTileElement>
+                <PortfolioTileElement>
+                  Code:
+                  <PortfolioTileLink
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {repo.html_url}
+                  </PortfolioTileLink>
+                </PortfolioTileElement>
+              </PortfolioTileLinks>
+            </PortfolioTile>
           ))}
-        </CurrencyConverter>
-        <ToDoList>
-          {repos.map((repo) => (
-            <ToDoList
-              key={repo.id}
-              title={repo.name}
-              description={repo.description}
-              demo={repo.homepage}
-              code={repo.html_url}
-            />
-          ))}
-        </ToDoList>
-        <PersonalHomepage>
-          {repos.map((repo) => (
-            <PersonalHomepage
-              key={repo.id}
-              title={repo.name}
-              description={repo.description}
-              demo={repo.homepage}
-              code={repo.html_url}
-            />
-          ))}
-        </PersonalHomepage>
-        </>
-        
+        </PortfolioWrapper>
       )}
     </>
   );
