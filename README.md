@@ -14,6 +14,9 @@ During creating the website I was using Visual Studio Code,
 - Styled Components
 - Hooks 
 - ES6+ Features 
+- Redux
+- Redux toolkit
+- Redux Saga
 
 The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid. All repositories are dowload from GitHub Api using async await convention.
 
