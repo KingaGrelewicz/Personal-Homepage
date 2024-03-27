@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { setRepos } from "./reposSlice";
 import Loading from "../Loading";
 import Error from "../Error";
-import Tile from "./Tile";
+import PortfolioTiles from "./PortfolioTiles";
 
 export const Portfolio = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ export const Portfolio = () => {
       {error && <Error />}
 
       {!loading && !error && (
-        <Tile />
+        <PortfolioTiles />
       )}
     </>
   );

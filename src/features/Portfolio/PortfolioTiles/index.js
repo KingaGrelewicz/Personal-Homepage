@@ -11,7 +11,7 @@ import {
 import { useSelector } from "react-redux";
 import { selectReposState } from "../reposSlice";
 
-const Tile = () => {
+const PortfolioTiles = () => {
     const repos = useSelector(selectReposState);
     return (
         <TileWrapper>
@@ -48,4 +48,4 @@ const Tile = () => {
     );
 };
 
-export default Tile;
+export default PortfolioTiles;
