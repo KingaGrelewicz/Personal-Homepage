@@ -8,13 +8,14 @@ import {
   HeaderWrapper,
 } from "./styled";
 import image from "../../image/kinga.jpg"
-import Toggler from "../Toggler";
+import ThemeToggler from "../ThemeToggler";
+
 
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Toggler />
+      <ThemeToggler />
       <HeaderWrapper>
         <HeaderImage src={image} alt="" />
         <HeaderContent>
