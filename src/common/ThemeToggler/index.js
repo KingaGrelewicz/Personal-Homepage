@@ -8,7 +8,7 @@ import {
 import { selectIsDarkTheme, toggleTheme } from "./themeSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const Toggler = () => {
+const ThemeToggler = () => {
     const isDarkTheme = useSelector(selectIsDarkTheme);
     const dispatch = useDispatch();
 
@@ -30,4 +30,4 @@ const Toggler = () => {
     )
 }
 
-export default Toggler;
+export default ThemeToggler;
