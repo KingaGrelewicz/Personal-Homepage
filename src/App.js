@@ -2,16 +2,15 @@ import { useSelector } from "react-redux";
 import { Globalstyle } from "./GlobalStyle";
 import Container from "./common/Container";
 import Footer from "./common/Footer";
-import Header from "./features/Header/index.js";
+import Header from "./common/Header/index.js";
 import { Portfolio } from "./features/Portfolio";
 import { Skills } from "./features/Skills/index.js";
 import Tools from "./image/tools.png"
 import Rocket from "./image/rocket.png"
 import { ThemeProvider } from "styled-components";
 import { SkillsList, professionalSkills, skillsToLearn } from "./features/SkillsList/index.js";
-import { selectIsDarkTheme } from "./features/Toggler/themeSlice.js";
+import { selectIsDarkTheme } from "./common/ThemeToggler/themeSlice.js";
 import { darkTheme, lightTheme } from "./theme.js";
-
 
 function App() {
   const isDarkTheme = useSelector(selectIsDarkTheme);  
@@ -20,9 +19,7 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Container>
         <Globalstyle />
-        <Header
-
-        />
+        <Header />
         <Skills
           title="My skillset includes"
           img={Tools}
