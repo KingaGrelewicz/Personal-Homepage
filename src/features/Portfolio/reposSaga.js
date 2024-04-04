@@ -5,11 +5,11 @@ import { fetchReposFailure, fetchReposStart, fetchReposSuccess, setRepos } from 
 export function* fetchReposHandler() {
     try {   
         yield put(fetchReposStart());
-        yield delay(1000);
+        yield delay(1000); // just to show loading view
         const reposData = yield call(getRepos);
         yield put(fetchReposSuccess(reposData));
     } catch (error) {
-        yield put(fetchReposFailure("ups"));
+        yield put(fetchReposFailure());
     }
 }
 
