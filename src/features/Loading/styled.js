@@ -26,6 +26,7 @@ export const LoadingSpinner = styled.img`
     animation: ${rotate360} 1s linear infinite;
     display: flex;
     margin: 0 auto;
+    height: auto;
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         width: 86px;
