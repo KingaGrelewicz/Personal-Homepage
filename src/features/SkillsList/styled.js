@@ -2,18 +2,25 @@ import styled from "styled-components";
 import { mediaQuery } from "../../theme";
 
 export const StyledSkillsList = styled.ul`
-    padding: 0 0 32px 16px;
-    margin: 32px;
+    padding: 16px;
+    margin: 12px 32px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px 32px;
     list-style-type: disc;
     line-height: 25px;
 
+    @media (max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 16px;
+        padding: 12px;
+    }
+
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         grid-template-columns: 1fr;
-        padding: 12px 16px;
-        margin: 0 16px;
+        font-size: 14px;
+        margin: 24px;
+        padding: 0 12px;
     }
 `;
 
