@@ -20,7 +20,7 @@ export const TileWrapper = styled.section`
 `;
 export const TileRepo = styled.div`
     background: ${({ theme }) => theme.color.secondaryBackground};
-    padding: 56px;
+    padding: 40px;
     border: 6px solid ${({ theme }) => `${theme.color.primaryBorder}33`};
     border-radius: 4px;
     display: grid;
