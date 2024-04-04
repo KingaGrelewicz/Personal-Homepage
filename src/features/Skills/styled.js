@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../theme";
 
-export const SkillsWrapper = styled.div`
+export const SkillsWrapper = styled.section`
     margin: 72px auto;
     background: ${({ theme }) => theme.color.secondaryBackground};
     box-shadow: 0px 16px 58px 0px ${({theme}) => `${theme.color.shadow}08`};
