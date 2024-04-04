@@ -17,7 +17,7 @@ export const HeaderToggleMode = styled.div`
     }
 `;
 
-export const HeaderTogglerLabel = styled.span`
+export const HeaderTogglerLabel = styled.label`
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         display: none;
     }
@@ -34,9 +34,10 @@ export const HeaderToggler = styled.button`
     align-items: center;
     padding: 3px;
     margin: -5px; 
+    outline-offset: 8px;
 `;
 
-export const HeaderTogglerIcon = styled.div`
+export const HeaderTogglerIcon = styled.span`
     height: 20px;
     width: 20px;
     display: flex;
@@ -45,7 +46,7 @@ export const HeaderTogglerIcon = styled.div`
     padding: 3px;
     background: ${({ theme }) => theme.color.primaryTextColor};
     transition: 0.7s;
-    transform: ${({ $isDarkTheme }) => ($isDarkTheme
+    transform: ${({ $moveToRight }) => ($moveToRight
         ? 'translateX(100%) rotate(180deg)'
         : 'translateX(0%) rotate(0deg)'
     )};
