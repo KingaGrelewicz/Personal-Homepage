@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../../theme";
 
-export const TileWrapper = styled.div`
+export const TileWrapper = styled.section`
     display: grid;
-    grid-template-columns: repeat(2, 592px);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
     justify-content: center;
     margin: 72px 0 120px 0;
+
+    @media (max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
+        grid-template-columns: 1fr;
+
+    }
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         grid-template-columns: 1fr;
@@ -46,7 +51,7 @@ export const TileHeader = styled.h3`
     }
 `;
 
-export const TileDescription = styled.div`
+export const TileDescription = styled.p`
     color: ${({ theme }) => theme.color.primaryTextColor};
     font-size: 18px;   
     font-weight: 400;
@@ -54,12 +59,13 @@ export const TileDescription = styled.div`
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
         font-size: 14px;
-        display: flex;
-        flex-wrap: wrap;
     }
 `;
 
-export const TileLinks = styled.div``;
+export const TileLinks = styled.div`
+    display: grid;
+    grid-gap: 8px;
+`;
 
 export const TileLink = styled.a`
     color: ${({ theme }) => theme.color.mainBlue};
@@ -79,7 +85,7 @@ export const TileLink = styled.a`
     }
 `;
 
-export const TileElement = styled.div`
+export const TileElement = styled.span`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.color.secondaryTextColor};
