@@ -40,6 +40,7 @@ export const HeaderImage = styled.img`
 
     @media ( max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
         width: 132px;
+        margin-left: 12px;
     }
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
@@ -66,13 +67,13 @@ export const HeaderContent = styled.div`
     font-size: 20px;
     font-weight: 400;
     color: ${({ theme }) => theme.color.primaryTextColor};
+    padding: 12px;
 
     @media ( max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
         font-size: 18px;
     }
 
     @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
-        padding: 0px;
         font-size: 16px;
     }
 `;
