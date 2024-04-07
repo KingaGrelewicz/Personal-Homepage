@@ -19,7 +19,7 @@ const ThemeToggler = () => {
     return (
         <HeaderToggleMode>
             <HeaderTogglerLabel>
-                {isDarkTheme ? "DARK MODE OFF" : "DARK MODE ON"}
+                {isDarkTheme ? "DARK MODE ON" : "DARK MODE OFF"}
             </HeaderTogglerLabel>
             <HeaderToggler onClick={handleToggleClick}>
                 <HeaderTogglerIcon $moveToRight={isDarkTheme}>
