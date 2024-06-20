@@ -15,10 +15,11 @@ export const professionalSkills = [
 ];
 
 export const skillsToLearn = [
+    "React Native",
     "Vite",
     "Next.js",
-    "CSS Emotion",
-    "Unit testing",
+    // "CSS Emotion",
+    // "Unit testing",
 ];
 
 export const SkillsList = ({ items }) => {
