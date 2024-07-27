@@ -15,9 +15,9 @@ export const professionalSkills = [
 ];
 
 export const skillsToLearn = [
+    "Type Script",
     "React Native",
     "Vite",
-    "Next.js",
     // "CSS Emotion",
     // "Unit testing",
 ];
