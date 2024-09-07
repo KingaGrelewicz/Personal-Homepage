@@ -3,16 +3,17 @@ import {
   HeaderButton,
   HeaderContent,
   HeaderImage,
-  HeaderMailIcone,
+  HeaderMailIcon,
   HeaderTitle,
   HeaderWrapper,
 } from "./styled";
 import image from "../../image/kinga.jpg";
 import ThemeToggler from "../ThemeToggler";
 import { email } from "../../email";
+import React from "react";
 
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <StyledHeader>
       <ThemeToggler />
@@ -29,7 +30,7 @@ const Header = () => {
           I also enjoy <strong>discussing solutions</strong> to challenges with a team, as each of us brings a different approach and experience,
           allowing for mutual learning and gaining insight into another person's point of view.
           <HeaderButton href={`mailto:${email}`} title={email}>
-            <HeaderMailIcone />Hire me
+            <HeaderMailIcon />Hire me
           </HeaderButton>
         </HeaderContent>
       </HeaderWrapper>

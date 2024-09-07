@@ -1,3 +1,4 @@
+import React from "react";
 import { email } from "../../email";
 import { SocialIcons } from "./SocialIcons";
 import {
@@ -8,7 +9,7 @@ import {
 } from "./styled";
 
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <FooterWrapper>
             <FooterParagraph>LET'S TALK</FooterParagraph>

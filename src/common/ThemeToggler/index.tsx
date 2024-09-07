@@ -1,3 +1,4 @@
+import React from "react";
 import {
     HeaderModeIcon,
     HeaderToggleMode,
@@ -8,7 +9,7 @@ import {
 import { selectIsDarkTheme, toggleTheme } from "./themeSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const ThemeToggler = () => {
+const ThemeToggler: React.FC = () => {
     const isDarkTheme = useSelector(selectIsDarkTheme);
     const dispatch = useDispatch();
 
