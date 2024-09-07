@@ -1,19 +1,24 @@
+import React from "react";
 import { useSelector } from "react-redux";
-import { Globalstyle } from "./GlobalStyle";
+import { Globalstyle } from "./GlobalStyle.js";
 import Container from "./common/Container";
 import Footer from "./common/Footer";
-import Header from "./common/Header/index.js";
-import { Portfolio } from "./features/Portfolio";
-import { Skills } from "./features/Skills/index.js";
-import Tools from "./image/tools.png"
-import Rocket from "./image/rocket.png"
+import Header from "./common/Header";
+import { Portfolio } from "./features/Portfolio/index.js";
+import { Skills } from "./features/Skills";
+import Tools from "./image/tools.png";
+import Rocket from "./image/rocket.png";
 import { ThemeProvider } from "styled-components";
-import { SkillsList, professionalSkills, skillsToLearn } from "./features/SkillsList/index.js";
+import {
+  SkillsList,
+  professionalSkills,
+  skillsToLearn,
+} from "./features/SkillsList";
 import { selectIsDarkTheme } from "./common/ThemeToggler/themeSlice.js";
-import { darkTheme, lightTheme } from "./theme.js";
+import { darkTheme, lightTheme } from "./theme";
 
-function App() {
-  const isDarkTheme = useSelector(selectIsDarkTheme);  
+const App: React.FC = () => {
+  const isDarkTheme = useSelector(selectIsDarkTheme);
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
@@ -25,20 +30,20 @@ function App() {
           img={Tools}
           skills={professionalSkills}
         >
-          <SkillsList />
+          <SkillsList items={[]} />
         </Skills>
         <Skills
           title="What I want to learn next"
           img={Rocket}
           skills={skillsToLearn}
         >
-          <SkillsList />
+          <SkillsList items={[]} />
         </Skills>
         <Portfolio />
         <Footer />
       </Container>
-    </ThemeProvider >
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
