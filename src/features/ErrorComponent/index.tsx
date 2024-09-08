@@ -7,7 +7,7 @@ import {
 } from "./styled";
 import DangerIcon from "../../image/Danger.png";
 
-const Error = () => (
+const ErrorComponent: React.FC = () => (
     <ErrorWarningWrapper>
         <ErrorWarningImage src={DangerIcon} alt="Danger Icon" />
         <ErrorWarning>Ooops! Something went wrong... </ErrorWarning>
@@ -24,4 +24,4 @@ const Error = () => (
     </ErrorWarningWrapper>
 );
 
-export default Error;
+export default ErrorComponent;
