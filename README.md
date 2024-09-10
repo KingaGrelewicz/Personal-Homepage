@@ -8,7 +8,7 @@ You can check out the demo here: [Link](https://kingagrelewicz.github.io/persona
 
 ## Technologies
 During creating the website I was using Visual Studio Code,
-- HTML
+- Type Script
 - JavaScript
 - Create React App
 - Styled Components
@@ -17,6 +17,7 @@ During creating the website I was using Visual Studio Code,
 - Redux
 - Redux toolkit
 - Redux Saga
+- HTML
 
 The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid. All repositories are dowload from GitHub Api using async await convention.
 
