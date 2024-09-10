@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Globalstyle } from "./GlobalStyle.js";
+import { Globalstyle } from "./GlobalStyle";
 import Container from "./common/Container";
 import Footer from "./common/Footer";
 import Header from "./common/Header";
-import { Portfolio } from "./features/Portfolio/index.js";
+import { Portfolio } from "./features/Portfolio";
 import { Skills } from "./features/Skills";
 import Tools from "./image/tools.png";
 import Rocket from "./image/rocket.png";
@@ -14,7 +14,7 @@ import {
   professionalSkills,
   skillsToLearn,
 } from "./features/SkillsList";
-import { selectIsDarkTheme } from "./common/ThemeToggler/themeSlice.js";
+import { selectIsDarkTheme } from "./common/ThemeToggler/themeSlice";
 import { darkTheme, lightTheme } from "./theme";
 
 const App: React.FC = () => {
