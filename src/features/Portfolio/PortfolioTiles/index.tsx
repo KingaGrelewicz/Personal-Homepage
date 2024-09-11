@@ -8,11 +8,11 @@ import {
     TileRepo, 
     TileWrapper 
 } from "./styled";
-import { useSelector } from "react-redux";
 import { selectReposState } from "../reposSlice";
+import { useAppSelector } from "../../../hooks";
 
 const PortfolioTiles = () => {
-    const repos = useSelector(selectReposState);
+    const repos = useAppSelector(selectReposState);
     return (
         <TileWrapper>
           {repos.map((repo) => (

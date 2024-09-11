@@ -1,19 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
 import {
   PortfolioHeader,
   PortfolioIcon,
   PortfolioSubheader,
 } from "./styled";
 import { useEffect } from "react";
-import { setRepos } from "./reposSlice";
+import { selectErrorState, selectLoadingState, setRepos } from "./reposSlice";
 import Loading from "../Loading";
-import Error from "../Error";
+import ErrorComponent from "../ErrorComponent";
 import PortfolioTiles from "./PortfolioTiles";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 
 export const Portfolio = () => {
-  const dispatch = useDispatch();
-  const loading = useSelector(state => state.repos.loading);
-  const error = useSelector(state => state.repos.error);
+  const dispatch = useAppDispatch();
+  const loading = useAppSelector(selectLoadingState);
+  const error = useAppSelector(selectErrorState);
 
   useEffect(() => {
     dispatch(setRepos());
@@ -27,7 +27,7 @@ export const Portfolio = () => {
 
       {loading && <Loading />}
 
-      {error && <Error />}
+      {error && <ErrorComponent />}
 
       {!loading && !error && (
         <PortfolioTiles />
