@@ -7,11 +7,12 @@ import {
     HeaderTogglerLabel
 } from "./styled";
 import { selectIsDarkTheme, toggleTheme } from "./themeSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 
-const ThemeToggler: React.FC = () => {
-    const isDarkTheme = useSelector(selectIsDarkTheme);
-    const dispatch = useDispatch();
+
+const ThemeToggler = () => {
+    const isDarkTheme = useAppSelector(selectIsDarkTheme);
+    const dispatch = useAppDispatch();
 
     const handleToggleClick = () => {
         dispatch(toggleTheme());
