@@ -23,6 +23,7 @@ export const Skills: React.FC<SkillsProps> = ({
         <SkillsImage src={img} alt="Skills Image" />
       </SkillsTitle>
       <SkillsList items={skills} />
+      {children}
     </SkillsWrapper>
   );
 };
