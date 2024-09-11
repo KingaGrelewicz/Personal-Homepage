@@ -35,7 +35,9 @@ export const SocialLink = styled.a`
         filter: brightness(150%);
     }`;
 
-export const styleIcon = Icon => styled(Icon) `
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+export const styleIcon = (Icon: IconComponent) => styled(Icon) `
     height: auto;
 
     @media(max-width: ${mediaQuery.breakpoints.mobile}px) {
