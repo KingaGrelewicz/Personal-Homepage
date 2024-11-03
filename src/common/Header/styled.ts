@@ -34,7 +34,7 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderImage = styled.img`
   width: 30vw;
-  max-width: 356px;
+  max-width: 250px;
   border-radius: 10%;
 
   @media (max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
