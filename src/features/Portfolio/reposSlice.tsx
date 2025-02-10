@@ -1,29 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
-import { ReactNode } from "react";
-
-interface Repo {
-  description: ReactNode;
-  homepage: string;
-  html_url: string | undefined;
-  id: number;
-  name: string;
-}
-
-interface ReposState {
-  loading: boolean;
-  error: string | null;
-  data: Repo[];
-}
-
-type FetchReposFailurePayload = string;
-type FetchReposSuccessPayload = Repo[];
+import { Repo, ReposState } from "../../types/types";
 
 const initialState: ReposState = {
   loading: false,
   error: null,
   data: [],
 };
+
+type FetchReposFailurePayload = string;
+type FetchReposSuccessPayload = Repo[];
 
 const reposSlice = createSlice({
   name: "repos",
