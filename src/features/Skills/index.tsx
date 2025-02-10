@@ -1,29 +1,16 @@
-import { SkillsList } from "../SkillsList";
-import { SkillsImage, SkillsTitle, SkillsWrapper } from "./styled";
+import HardSkills from "./HardSkills";
+import { SkillsList } from "./skillsList";
+import SoftSkills from "./SoftSkills";
+import { SkillsTitle } from "./styled";
 
-interface Skill {
-  name: string;
-}
-
-interface SkillsProps extends React.PropsWithChildren<{}> {
-  title: string;
-  img: string;
-  skills: Skill[];
-}
-export const Skills: React.FC<SkillsProps> = ({
-  title,
-  img,
-  skills,
-  children,
-}) => {
+const Skills = () => {
   return (
-    <SkillsWrapper>
-      <SkillsTitle>
-        {title}
-        <SkillsImage src={img} alt="Skills Image" />
-      </SkillsTitle>
-      <SkillsList items={skills} />
-      {children}
-    </SkillsWrapper>
+    <>
+      <SkillsTitle>Skills</SkillsTitle>
+      <SoftSkills skills={SkillsList.softSkills} />
+      <HardSkills skills={SkillsList.hardSkills} />
+    </>
   );
 };
+
+export default Skills;
