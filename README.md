@@ -1,4 +1,5 @@
 # Personal homepage
+
 This is a simple website showcasing my skills and projects. You'll find links to the code of my repositories, demos, and contact information. Additionally, you can explore my plans for future skill acquisition.
 Do you prefer dark mode? You can change it. I will be saved in Local Storage 😎
 
@@ -7,19 +8,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You can check out the demo here: [Link](https://kingagrelewicz.github.io/personal-homepage/)
 
 ## Technologies
+
 During creating the website I was using Visual Studio Code,
+
 - Type Script
 - JavaScript
+- Router
 - Create React App
 - Styled Components
-- Hooks 
-- ES6+ Features 
+- Hooks
+- ES6+ Features
 - Redux
 - Redux toolkit
 - Redux Saga
 - HTML
 
-The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid. All repositories are dowload from GitHub Api using async await convention.
+The website was created to response correctly on desktop, tablets, and mobile devices thanks to using media queries. I used fonts available on Google Fonts, Sharing debugger and flexbox, grid, react-icons, react-transition-group. All repositories are dowload from GitHub Api using async await convention.
 
 ## Available Scripts
 
