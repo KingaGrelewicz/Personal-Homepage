@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { mediaQuery } from "../../theme";
 
 export const FooterWrapper = styled.footer`
-  margin: 24px auto;
+  margin: 120px auto 0;
   max-width: 1216px;
+
+  @media (max-width: ${mediaQuery.breakpoints.mobileVertical}px) {
+    margin: 120px 12px 0;
+  }
 
   @media (max-width: ${mediaQuery.breakpoints.mobile}px) {
     margin: 0 16px;
@@ -18,7 +22,7 @@ export const FooterParagraph = styled.h2`
 
 export const FooterMail = styled.a`
   color: ${({ theme }) => theme.color.secondaryTextColor};
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 900;
   text-decoration: none;
 
